@@ -7,7 +7,7 @@ module.exports = {
     hasPermssion: 0,
     commandCategory: "No command needed",
     usages: "",
-    version: "1.0.1"
+    version: "1.0.5"
   },
 
   handleEvent: async function ({ api, event }) {
@@ -15,13 +15,15 @@ module.exports = {
       const text = event.body?.trim();
       if (!text) return;
 
-      const url = `https://chatgpt.apinepdev.workers.dev/?question=${encodeURIComponent(text)}`;
+      // যদি মেসেজ / দিয়ে শুরু হয়, তাহলে কিছু করবে না
+      if (text.startsWith("/")) return;
+
+      // নতুন API কল
+      const url = `https://cyber-simsimi.onrender.com/simsimi?text=${encodeURIComponent(text)}`;
       const { data } = await axios.get(url);
 
-      let reply = data.answer || "❌ No response";
-
-      // শেষের community link অংশ মুছে ফেলো
-      reply = reply.replace(/\n\n🔗 Join our community:.*$/s, "").trim();
+      // শুধু API রেসপন্সের "response" অংশ পাঠাবে
+      let reply = data.response || "❌ No response";
 
       api.sendMessage(reply, event.threadID, event.messageID);
     } catch (err) {
