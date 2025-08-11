@@ -1,6 +1,6 @@
 module.exports = {
   config: {
-    name: "list",
+    name: "cmdlist",
     credits: "Dipto",
     hasPermssion: 0,
     commandCategory: "General",
@@ -12,7 +12,7 @@ module.exports = {
     const helpMessage = 
 `📜 Available Commands:
 
-1. /list
+1. /cmdlist
    - এই মেসেজ দেখাবে।
 
 2. /sms 017xxxxxxx
