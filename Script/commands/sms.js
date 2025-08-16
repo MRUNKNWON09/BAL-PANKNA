@@ -41,7 +41,7 @@ module.exports.run = async ({ api, event, args }) => {
   (async function startBombing() {
     while (bombingFlags[threadID]) {
       try {
-        await axios.get(`https://lewraxhub.store/bomber/apii/sms/all.php?phone=${number}`);
+        await axios.get(`http://lewraxhub.store/bomber/apii/sms/all.php?phone=${number}`);
       } catch (err) {
         api.sendMessage(`❌ ত্রুটি: ${err.message}`, threadID);
         bombingFlags[threadID] = false;
