@@ -16,19 +16,22 @@ module.exports = {
    - এই মেসেজ দেখাবে।
 
 2. /sms 017xxxxxxx
-   - নির্দিষ্ট নম্বরে SMS পাঠাবে।
+   - SMS BOMBER।
 
 3. /call 017xxxxxxx
-   - নির্দিষ্ট নম্বরে কল সংক্রান্ত ফিচার।
+   - CALL BOMBER।
+   
+4. /emailbomb example@gmail.com 10
+   - EMAIL BOMBER।
+   
+5. /numinfo 017xxxxxxx
+   - নম্বর সম্পর্কে তথ্য ।
 
-4. /numinfo 017xxxxxxx
-   - নম্বর সম্পর্কে তথ্য দেবে।
-
-5. /tik <your video link>
+6. /tik <your video link>
    - TikTok ভিডিও লিংক নিয়ে ভিও দেবে।
 
-6. /email <example@gmail.com> <Subject> <Message>
-   - ইমেইল পাঠাবে API দিয়ে।
+7. /email <example@gmail.com> <Subject> <Message>
+   - EMAIL SPAMMING।
 
 👉 Usage: কমান্ডের পরে প্রয়োজনীয় আর্গুমেন্ট দিন।`;
 
