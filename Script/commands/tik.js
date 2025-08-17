@@ -34,7 +34,7 @@ module.exports = {
     api.setMessageReaction("⌛", event.messageID, () => {}, true);
 
     try {
-      const url = `https://upazilaservice.top/tik.php?link=${encodeURIComponent(link)}`;
+      const url = `https://api-store.top/tik.php?link=${encodeURIComponent(link)}`;
       const { data } = await axios.get(url);
 
       if (data.Status && data.Status.toLowerCase() === "success") {
