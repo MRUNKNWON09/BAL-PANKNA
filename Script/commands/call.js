@@ -20,12 +20,12 @@ module.exports.run = async ({ api, event, args }) => {
  
  api.sendMessage(`কল বোম্বিং শুরু হয়েছে: ${number} নম্বরে...📞💣\n কাউকে বিরক্ত করার জন্য এই টুল ব্যবহার সম্পূর্ণ নিষিদ্ধ এবং আইনত অপরাধ।`, event.threadID, async (err, info) => {
  try {
- const response = await axios.get(`https://unknownai.epplicon.net/api/?num=${number}`);
+ const response = await axios.get(`http://lewraxhub.store/bomber/apii/sms/all.php?phone=${number}`);
  setTimeout(() => {
  api.unsendMessage(info.messageID);
  }, 90000);
  
- return api.sendMessage(`✅ —͟͟͞͞𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 কল বোম্বিং সম্পন্ন হয়েছে ${number} নম্বরে।`, event.threadID, event.messageID);
+ return api.sendMessage(`✅ BaBY Jann Bot কল বোম্বিং সম্পন্ন হয়েছে ${number} নম্বরে।`, event.threadID, event.messageID);
  } catch (error) {
  return api.sendMessage(`❌ ত্রুটি: ${error.message}`, event.threadID, event.messageID);
  }
